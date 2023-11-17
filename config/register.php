@@ -2,9 +2,14 @@
 include 'config.php';
 
 // Password must be between 5 and 20 characters long.
-if (strlen($_POST['psw']) > 20 || strlen($_POST['psw']) < 5) {
+// if (strlen($_POST['psw']) < 5 || strlen($_POST['psw']) > 20) {
+//     exit('Password must be between 5 and 20 characters long!');
+// }
+
+if (isset($_POST['psw']) && (strlen($_POST['psw']) < 5 || strlen($_POST['psw']) > 20)) {
     exit('Password must be between 5 and 20 characters long!');
 }
+
 // We need to check if the account with that username exists.
 $stmt = $conn->prepare('SELECT student_num, psw FROM student WHERE student_num = ? ');
 $stmt->bind_param('i', $_POST['student_num']);
