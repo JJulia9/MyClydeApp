@@ -18,6 +18,8 @@
    </span>
 </div>
 <div class="flex justify-center my-2 mx-4 md:mx-0">
+      <!-- Display error message if it exists -->
+
    <form class="w-full max-w-xl bg-white rounded-lg shadow-md p-6"  method="post" action="../config/authenticate.php">
       <div class="flex flex-wrap -mx-3 mb-6">
          <div class="w-full md:w-full px-3 mb-6">
