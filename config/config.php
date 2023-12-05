@@ -5,7 +5,7 @@
 $hn= "localhost";
 $un = "my_clyde_admin";
 $pw = "QwpddO9.1Oj0VjJU";
-$db = "my_clyde";
+$db = "new_my_clyde";
 
 $conn = new mysqli($hn, $un, $pw, $db);
 
