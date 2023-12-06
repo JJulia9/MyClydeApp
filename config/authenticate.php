@@ -41,13 +41,8 @@ if (isset($_POST['student_num'])) {
                 $_SESSION['loggedin'] = TRUE; // Corrected 'loggendin' to 'loggedin'
                 $_SESSION['student_num'] = $student_num;
 
-                if ($student_num == 123456) {
-                    header("Location: ../pages/student/dashboard.php");
-                    exit; // Add exit after header redirect
-                } else {
-                    header("Location: ../pages/student/dashboard.php");
-                    exit; // Add exit after header redirect
-                }
+               header('Location: ../s/dashboard');
+               
             } else {
                 $errorMessage = 'Incorrect login details';
             }
