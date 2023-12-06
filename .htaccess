@@ -19,9 +19,14 @@ RewriteEngine On
 RewriteRule ^home$ index.php [L]
 RewriteRule ^login$ pages/Login.php [L]
 RewriteRule ^register$ pages/Register.php [L]
+RewriteRule ^adminLogin$ pages/admin/AdminLogin.php [L]
+RewriteRule ^logout$ pages/Logout.php [L]
+
+
 
 
 
 
 # User Navigation
 RewriteRule ^s/dashboard$ pages/student/Dashboard.php [L]
+RewriteRule ^a/adminDashboard$ pages/admin/Dashboard.php [L]
