@@ -17,30 +17,30 @@ include 'partials/Header.php';
             <div
                 class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left">
                 <h2 class="mb-4 text-3xl font-bold text-left lg:text-5xl">
-                    Exclusive Agency For
+                    Log in to your
 
                     <span class="text-5xl text-blue-500 leading-relaxeds"
-                        >Technology
+                        >academy space
                     </span>
 
-                    Provide Solution
+                   
                 </h2>
 
                 <p
                     class="visible mx-0 mt-3 mb-0 text-sm leading-relaxed text-left text-slate-400">
-                    Helping you maximize operations management with digitization
+                    Helping you maximize your knowledge
                 </p>
             </div>
 
             <div class="text-center lg:text-left">
-                <a
+                <a href="<?=BASE_PATH?>login"
                     class="block visible py-4 px-8 mb-4 text-xs font-semibold tracking-wide leading-none text-white bg-blue-500 rounded cursor-pointer sm:mr-3 sm:mb-0 sm:inline-block"
-                    >Key Features</a
+                    >Log in</a
                 >
 
-                <a
+                <a href="<?=BASE_PATH?>register"
                     class="block visible py-4 px-8 text-xs font-semibold leading-none bg-white rounded border border-solid cursor-pointer sm:inline-block border-slate-200 text-slate-500"
-                    >How We Work?</a
+                    >Register</a
                 >
             </div>
         </div>
