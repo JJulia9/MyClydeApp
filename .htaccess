@@ -30,8 +30,8 @@ RewriteRule ^logout$ pages/Logout.php [L]
 # User Navigation
 RewriteRule ^s/dashboard$ pages/student/Dashboard.php [L]
 RewriteRule ^a/adminDashboard$ pages/admin/Dashboard.php [L]
-RewriteRule ^s/events$ pages/student/Events.php [L]
-RewriteRule ^s/news$ pages/student/News.php [L]
+RewriteRule ^s/events$ pages/shared/Events.php [L]
+RewriteRule ^s/news$ pages/shared/News.php [L]
 RewriteRule ^s/mycourse$ pages/student/MyCourse.php [L]
 RewriteRule ^s/mydetails$ pages/student/MyDetails.php [L]
 

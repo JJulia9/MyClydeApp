@@ -1,4 +1,6 @@
 <?php include '../../partials/Header.php';
+ include '../../config/config.php'; 
+ include '../../queries/student.php';
 ?>
 
 
@@ -48,7 +50,7 @@
               <h2
                 class="font-medium text-xs md:text-sm text-center text-teal-500"
               >
-                Eduard Pantazi
+              <?= $firstname ?>
               </h2>
               <p class="text-xs text-gray-500 text-center">Student</p>
             </div>
@@ -222,7 +224,13 @@
       </div>
      
 
+
+
+  
+
       <!-- classes card -->
+
+
 
       <div class="flex flex-col justify-center items-center h-[100vh]">
             <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[300px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">

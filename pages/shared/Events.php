@@ -1,5 +1,16 @@
 <?php include '../../partials/Header.php';
+include '../../config/config.php';
+include '../../queries/eventQuery.php';
+
+$datetime = new DateTime($date);
+
+// Format the datetime in a nice-looking way
+$formattedDateTime = $datetime->format('F j, Y \a\t H:i:s');
 ?>
+
+
+
+
 
 <!-- component -->
 <!-- This is an example component -->
@@ -168,6 +179,7 @@
 		<!-- /Modal -->
 	</div>
 
+
 	<script>
 		const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -292,27 +304,70 @@
 		}
 	</script>
   </div>
+</div>
 <!-- component -->
+<br>
+	<br>
 
+<!-- ====== Cards Section Start -->
+<section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6] h-screen flex items-center justify-center">
+   <div class="container mx-auto">
+      <div class="flex flex-wrap -mx-4">
+      <?php while ($events->fetch()): ?>
 
-<section class="text-blueGray-700 bg-white mt-20">
-    <div class="container flex flex-col items-center px-5 py-16 mx-auto  md:flex-row lg:px-28">
-        <div class="flex flex-col items-start w-full pt-0 mb-16 text-left  lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:mb-0">
-        <h1 class="mb-8 text-2xl font-black tracking-tighter text-black  md:text-5xl title-font"> Medium length display headline. </h1>
-        <p class="mb-8 text-base leading-relaxed text-left text-blueGray-600"> Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page. </p>
-        <div class="flex flex-col w-full gap-2 md:justify-start md:flex-row">
-            <input class="flex-grow w-full px-4 py-3 mb-4 text-base text-black transition ease-in-out transform rounded-lg  duration-650 lg:w-auto bg-blueGray-200 focus:outline-none focus:border-purple-500 sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2" placeholder="Your Email" type="email">
-            <button class="flex items-center px-6 py-3 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-lg  hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"> Book </button>
-        </div>
-        <p class="w-full mt-2 mb-8 text-sm text-left text-blueGray-600"> I got 99 problems and blocks ain't one. </p>
-        </div>
-        <div class="w-full lg:w-5/6 lg:max-w-lg md:w-1/2">
-        <img class="object-cover object-center rounded-lg" alt="hero" src="https://dummyimage.com/720x600/F3F4F7/8693ac">
-        </div>
-    </div>
+         <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+            <div class="bg-white rounded-lg overflow-hidden mb-10">
+               <img
+                  src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
+                  alt="image"
+                  class="w-full"
+                  />
+               <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                  <h3>
+                     <a
+                        href="javascript:void(0)"
+                        class="
+                        font-semibold
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-4
+                        block
+                        hover:text-primary
+                        "
+                        >
+                     <?= $formattedDateTime ?>
+                     </a>
+                  </h3>
+                  <p class="text-base text-body-color leading-relaxed mb-7">
+                    <?= $description ?>
+                  </p>
+                  <a
+                     href="javascript:void(0)"
+                     class="
+                     inline-block
+                     py-2
+                     px-7
+                     border border-[#E5E7EB]
+                     rounded-full
+                     text-base text-body-color
+                     font-medium
+                     hover:border-primary hover:bg-primary hover:text-white
+                     transition
+                     "
+                     >
+                  View Details
+                  </a>
+               </div>
+            </div>
+         </div>
+        <?php endwhile ?>
+      </div>
+   </div>
 </section>
-
-  
 
 <?php include '../../partials/Footer.php';
 ?>
