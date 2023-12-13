@@ -1,5 +1,8 @@
 <?php
-    include '../../partials/Header.php';
+include '../../config/config.php';
+include '../../partials/Header.php';
+    
+
 ?>
 
 <!-- component -->
