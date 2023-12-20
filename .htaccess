@@ -34,6 +34,9 @@ RewriteRule ^s/events$ pages/shared/Events.php [L]
 RewriteRule ^s/news$ pages/shared/News.php [L]
 RewriteRule ^s/mycourse$ pages/student/MyCourse.php [L]
 RewriteRule ^s/mydetails$ pages/student/MyDetails.php [L]
+RewriteRule ^s/myunits$ pages/student/MyUnit.php [L]
+RewriteRule ^s/comment$ pages/student/Comment.php [L]
+RewriteRule ^a/view/([0-9]+)$ pages/admin/edit_view_students.php?student_num=$1 [L]
 
 
 RewriteRule ^a/adminEvents$ pages/admin/AddEvents.php [L]

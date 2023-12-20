@@ -4,7 +4,6 @@
       s.firstname,
       s.surname,
       s.email,
-      s.dob,
       c.name
     
     FROM student s
@@ -18,6 +17,6 @@
       // store the results
       $students->store_result();
       // create variables for the results (these should be in the same order as the columns in the query)
-      $students->bind_result($studentNumbers, $firstnames, $surnames, $emails, $dobs, $courses);
+      $students->bind_result($studentNumbers, $firstnames, $surnames, $emails, $course);
   
     ?>

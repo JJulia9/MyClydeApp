@@ -14,6 +14,4 @@
     $course->execute();
     $course->store_result();
     $course->bind_result($unitName, $unitDesc, $enrolDate);
-
-    
     ?>
